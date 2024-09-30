@@ -4,6 +4,9 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import Comparison from "./components/Comparison";
 import Home from "./components/Home";
 import Reports from "./components/Reports";
+import RegisterPage from "./components/Register";
+import LoginPage from "./components/Login";
+import { FaTruckMonster } from "react-icons/fa";
 
 const theme = createTheme({
   components: {
@@ -32,6 +35,10 @@ function App() {
         { path: "/reports", element: <Reports /> },
       ],
     },
+
+    {index:true,element:<RegisterPage/>},
+    {path:'/register',element:<RegisterPage/>},
+    {path:'/login',element:<LoginPage/>}
   ]);
 
   return (

@@ -1,3 +1,11 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+
 .MuiInputLabel-root {
   color: blue; /* تغيير لون النص */
   font-size: 18px; /* تغيير حجم الخط */
