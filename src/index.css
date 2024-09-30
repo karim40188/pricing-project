@@ -1,0 +1,16 @@
+.MuiInputLabel-root {
+  color: blue; /* تغيير لون النص */
+  font-size: 18px; /* تغيير حجم الخط */
+  font-weight: bold; /* جعل الخط عريض */
+}
+
+.field{
+  display:flex;
+  gap:5px;
+  align-items: center;
+}
+input{
+  width:30%;
+  height:30px;
+  
+}
