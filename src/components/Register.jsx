@@ -1,6 +1,4 @@
-import React from "react";
 import { Container, Box, Typography, TextField, Button } from "@mui/material";
-import { FaUser, FaEnvelope, FaLock } from "react-icons/fa"; // استيراد الأيقونات
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +8,8 @@ const RegisterPage = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(135deg, #FF6F61 0%, #F7B733 100%)",
+        // background: "linear-gradient(135deg, #FF6F61 0%, #F7B733 100%)",
+        backgroundColor:'#F3F3F3',
         height: "100vh",
       }}
     >
@@ -36,7 +35,6 @@ const RegisterPage = () => {
           <Typography
             component="h1"
             variant="h5"
-            color="#fff"
             fontWeight="bold"
           >
             Register
@@ -50,17 +48,8 @@ const RegisterPage = () => {
               label="Name"
               name="name"
               autoFocus
-              InputLabelProps={{ style: { color: "#fff" } }}
-              InputProps={{
-                startAdornment: (
-                  <FaUser style={{ color: "#fff", marginRight: "8px" }} />
-                ),
-                style: {
-                  color: "#fff",
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
-                  borderRadius: "5px",
-                },
-              }}
+             
+         
             />
             <TextField
               margin="normal"
@@ -69,17 +58,7 @@ const RegisterPage = () => {
               id="email"
               label="Email Address"
               name="email"
-              InputLabelProps={{ style: { color: "#fff" } }}
-              InputProps={{
-                startAdornment: (
-                  <FaEnvelope style={{ color: "#fff", marginRight: "8px" }} />
-                ),
-                style: {
-                  color: "#fff",
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
-                  borderRadius: "5px",
-                },
-              }}
+             
             />
             <TextField
               margin="normal"
@@ -89,21 +68,11 @@ const RegisterPage = () => {
               label="Password"
               type="password"
               id="password"
-              InputLabelProps={{ style: { color: "#fff" } }}
-              InputProps={{
-                startAdornment: (
-                  <FaLock style={{ color: "#fff", marginRight: "8px" }} />
-                ),
-                style: {
-                  color: "#fff",
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
-                  borderRadius: "5px",
-                },
-              }}
+            
             />
             <Button
               onClick={() => {
-                navigate("/");
+                navigate("/home");
               }}
               type="submit"
               fullWidth
@@ -112,17 +81,17 @@ const RegisterPage = () => {
                 mb: 2,
                 borderRadius: "30px",
                 height: "40px",
-                backgroundColor: "#fff",
-                color: "#000",
+                backgroundColor: "#114639",
+                color: "#fff",
                 "&:hover": {
-                  backgroundColor: "#9a7b9e",
+                  backgroundColor: "#114645",
                 },
                 transition: "background-color 0.3s ease",
               }}
             >
               Register
             </Button>
-            <Typography variant="body2" color="#fff" align="center">
+            <Typography variant="body2"  align="center">
               Already have an account?{" "}
               <Button onClick={() => navigate("/login")} color="inherit">
                 Login

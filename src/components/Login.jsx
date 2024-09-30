@@ -1,6 +1,4 @@
-import React from "react";
 import { Container, Box, Typography, TextField, Button } from "@mui/material";
-import { FaUser, FaLock } from "react-icons/fa"; // استيراد الأيقونات
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +8,7 @@ const LoginPage = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(135deg, #FF6F61 0%, #F7B733 100%)",
+        backgroundColor: "#F3F3F3",
         height: "100vh",
       }}
     >
@@ -33,12 +31,7 @@ const LoginPage = () => {
             <Box sx={{ width: "100%" }} component="img" src={logo} />
           </Box>
 
-          <Typography
-            component="h1"
-            variant="h5"
-            color="#fff"
-            fontWeight="bold"
-          >
+          <Typography component="h1" variant="h5" fontWeight="bold">
             Login
           </Typography>
           <Box component="form" noValidate sx={{ mt: 1 }}>
@@ -50,17 +43,6 @@ const LoginPage = () => {
               label="Username"
               name="username"
               autoFocus
-              InputLabelProps={{ style: { color: "#fff" } }}
-              InputProps={{
-                startAdornment: (
-                  <FaUser style={{ color: "#fff", marginRight: "8px" }} />
-                ),
-                style: {
-                  color: "#fff",
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
-                  borderRadius: "5px",
-                },
-              }}
             />
             <TextField
               margin="normal"
@@ -70,21 +52,10 @@ const LoginPage = () => {
               label="Password"
               type="password"
               id="password"
-              InputLabelProps={{ style: { color: "#fff" } }}
-              InputProps={{
-                startAdornment: (
-                  <FaLock style={{ color: "#fff", marginRight: "8px" }} />
-                ),
-                style: {
-                  color: "#fff",
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
-                  borderRadius: "5px",
-                },
-              }}
             />
             <Button
               onClick={() => {
-                navigate("/"); // الانتقال إلى الصفحة الرئيسية بعد تسجيل الدخول
+                navigate("/home"); // الانتقال إلى الصفحة الرئيسية بعد تسجيل الدخول
               }}
               type="submit"
               fullWidth
@@ -93,10 +64,9 @@ const LoginPage = () => {
                 mb: 2,
                 borderRadius: "30px",
                 height: "40px",
-                backgroundColor: "#fff",
-                color: "#000",
+                backgroundColor: "#114639",
                 "&:hover": {
-                  backgroundColor: "#9a7b9e", // لون مختلف عند التحريك
+                  backgroundColor: "#114639", // لون مختلف عند التحريك
                 },
                 transition: "background-color 0.3s ease", // تأثير انتقال لونه
               }}
