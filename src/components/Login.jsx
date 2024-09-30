@@ -65,6 +65,8 @@ const LoginPage = () => {
                 borderRadius: "30px",
                 height: "40px",
                 backgroundColor: "#114639",
+                color:"#fff",
+              
                 "&:hover": {
                   backgroundColor: "#114639", // لون مختلف عند التحريك
                 },
