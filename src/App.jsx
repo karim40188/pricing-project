@@ -6,8 +6,7 @@ import Home from "./components/Home";
 import Reports from "./components/Reports";
 import RegisterPage from "./components/Register";
 import LoginPage from "./components/Login";
-import { FaTruckMonster } from "react-icons/fa";
-
+import { SideBarOpenProvider } from "./components/Context/Context";
 const theme = createTheme({
   components: {
     MuiTextField: {
@@ -36,16 +35,18 @@ function App() {
       ],
     },
 
-    {index:true,element:<RegisterPage/>},
-    {path:'/register',element:<RegisterPage/>},
-    {path:'/login',element:<LoginPage/>}
+    { index: true, element: <RegisterPage /> },
+    { path: "/register", element: <RegisterPage /> },
+    { path: "/login", element: <LoginPage /> },
   ]);
 
   return (
     <ThemeProvider theme={theme}>
-      <RouterProvider router={router}>
-        <div>App</div>
-      </RouterProvider>
+      <SideBarOpenProvider>
+        <RouterProvider router={router}>
+          <div>App</div>
+        </RouterProvider>
+      </SideBarOpenProvider>
     </ThemeProvider>
   );
 }
